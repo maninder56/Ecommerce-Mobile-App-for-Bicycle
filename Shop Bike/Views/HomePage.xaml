@@ -2,11 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Shop_Bike.Views.HomePage"
-             Title="HomePage">
+             Title="Shop Bike"
+             >
     <VerticalStackLayout>
+        
         <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <HorizontalStackLayout Spacing="50">
+
+            <SearchBar Placeholder="Search"
+                       WidthRequest="250"/>
+            <Button Text="Cart"/>
+
+        </HorizontalStackLayout>
+        <Image Source="bike_one.jpg"/>
+
+        
+
+
     </VerticalStackLayout>
+    
 </ContentPage>
