@@ -52,6 +52,8 @@
 	  <None Remove="Resources\Images\bike_one.jpg" />
 	  <None Remove="Resources\Images\bike_three.jpg" />
 	  <None Remove="Resources\Images\bike_two.jpg" />
+	  <None Remove="Resources\Images\cart.png" />
+	  <None Remove="Resources\Images\cart2.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

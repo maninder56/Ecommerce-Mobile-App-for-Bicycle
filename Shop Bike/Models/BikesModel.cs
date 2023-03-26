@@ -8,8 +8,14 @@ namespace Shop_Bike.Models
 {
     public class BikesModel
     {
-        ImageSource bike_one = "bike_one.jpg";
+        public string Bike_one { get; set; } = "bike_one.jpg";
+        public string Bike_two { get; set; } = "bike_two.jpg";
+        public string Bike_three { get; set; } = "bike_three.jpg";
 
 
+        public BikesModel()
+        {
+
+        }
     }
 }

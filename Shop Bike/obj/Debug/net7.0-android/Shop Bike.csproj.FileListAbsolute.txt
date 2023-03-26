@@ -956,6 +956,9 @@ C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-an
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\lp\151\jl\files.cache
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\lp\153\jl\files.cache
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\lp\155\jl\files.cache
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable\bike_one.jpg
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable\bike_three.jpg
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable\bike_two.jpg
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\mscorlib.dll
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll
@@ -969,6 +972,9 @@ C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-an
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\System.Xml.dll
-C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable\bike_one.jpg
-C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable\bike_three.jpg
-C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable\bike_two.jpg
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable\cart.png
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\cart2.png
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\cart2.png
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\cart2.png
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\cart2.png
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\cart2.png

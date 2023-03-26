@@ -2,27 +2,108 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Shop_Bike.Views.HomePage"
+             xmlns:local="clr-namespace:Shop_Bike.ViewModels"
              Title="Shop Bike"
-             >
-    <VerticalStackLayout>
-        
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             x:DataType="local:HomePageViewModel" >
 
-        <HorizontalStackLayout Spacing="50">
+    <ContentPage.BindingContext>
+        <local:HomePageViewModel/>
+    </ContentPage.BindingContext>
 
-            <SearchBar Placeholder="Search"
-                       WidthRequest="250"/>
-            <Button Text="Cart"/>
+    <Grid BackgroundColor="White"
+          VerticalOptions="FillAndExpand"
+          HorizontalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <HorizontalStackLayout Grid.Row="0">
+
+            <Border StrokeThickness="5"
+                    StrokeShape="RoundRectangle 100,100,100,100"
+                    Background="#EEEEEE "
+                    Padding="5,10"
+                    HorizontalOptions="Center">
+
+                <Border.Stroke>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#DADADA"
+                          Offset="0.1" />
+                        <GradientStop Color="White"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Stroke>
+
+
+                <SearchBar Placeholder="Search"
+                           FontSize="Medium"
+                           WidthRequest="270"/> 
+            </Border>
+
+            <Border StrokeThickness="5"
+                    StrokeShape="RoundRectangle 80,80,80,80"
+                    Background="#EEEEEE "
+                    Padding="10,10"
+                    WidthRequest="100"
+                    HorizontalOptions="Center">
+                
+                <Border.Stroke>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#DADADA"
+                          Offset="0.1" />
+                        <GradientStop Color="White"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Stroke>
+
+                <Button Text="Cart"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        Padding="5"/>
+
+            </Border>
 
         </HorizontalStackLayout>
-        <Image Source="bike_one.jpg"/>
 
         
-
-
-    </VerticalStackLayout>
+        
+        <ScrollView Grid.Row="1">
+            <Label Text="Avilable products"/>
+            
+            
+            
+        </ScrollView>
+        
+        
+        
+    </Grid>
     
+    
+
 </ContentPage>
+
+    
+    
+<!-- <VerticalStackLayout>
+        <HorizontalStackLayout Spacing="10" Padding="10">
+            <SearchBar Placeholder="Search"
+                       WidthRequest="250"/>
+            <Button Text="Cart"
+                    WidthRequest="100"/>
+        </HorizontalStackLayout>
+    add alable avilable products 
+    
+        <ScrollView>
+            <VerticalStackLayout>
+                <Image Source="{Binding Bike_one}"/>
+                <Image Source="{Binding Bike_two}"/>
+                <Image Source="{Binding Bike_three}"/>
+                <Label Text="Hello"/>
+            </VerticalStackLayout>
+            
+        </ScrollView>
+   </VerticalStackLayout> -->
+    
