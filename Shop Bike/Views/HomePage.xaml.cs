@@ -5,9 +5,10 @@ namespace Shop_Bike.Views;
 
 public partial class HomePage : ContentPage
 {
-	public HomePage()
+	public HomePage(HomePageViewModel home)
 	{
 		InitializeComponent();
+		BindingContext = home;		
 	}
 
 	// got to cart page 
@@ -15,4 +16,6 @@ public partial class HomePage : ContentPage
     {
 
     }
+
+    
 }

@@ -38,7 +38,7 @@
 
                 <SearchBar Placeholder="Search"
                            FontSize="Medium"
-                           WidthRequest="270"/> 
+                           WidthRequest="270"/>
             </Border>
 
             <Border StrokeThickness="5"
@@ -47,7 +47,7 @@
                     Padding="10,10"
                     WidthRequest="100"
                     HorizontalOptions="Center">
-                
+
                 <Border.Stroke>
                     <LinearGradientBrush EndPoint="0,1">
                         <GradientStop Color="#DADADA"
@@ -63,47 +63,43 @@
                         FontSize="20"
                         FontAttributes="Bold"
                         Padding="5"/>
-
             </Border>
 
         </HorizontalStackLayout>
 
-        
-        
-        <ScrollView Grid.Row="1">
-            <Label Text="Avilable products"/>
-            
-            
-            
-        </ScrollView>
-        
-        
-        
+        <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding Bikes}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.RowSpan="2"
+                               Source="{Binding }"
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+
     </Grid>
     
     
 
 </ContentPage>
 
+<!--
+        
+        
+        
+        
+        
+        -->
     
-    
-<!-- <VerticalStackLayout>
-        <HorizontalStackLayout Spacing="10" Padding="10">
-            <SearchBar Placeholder="Search"
-                       WidthRequest="250"/>
-            <Button Text="Cart"
-                    WidthRequest="100"/>
-        </HorizontalStackLayout>
-    add alable avilable products 
-    
-        <ScrollView>
-            <VerticalStackLayout>
-                <Image Source="{Binding Bike_one}"/>
-                <Image Source="{Binding Bike_two}"/>
-                <Image Source="{Binding Bike_three}"/>
-                <Label Text="Hello"/>
-            </VerticalStackLayout>
-            
-        </ScrollView>
-   </VerticalStackLayout> -->
-    
+   
