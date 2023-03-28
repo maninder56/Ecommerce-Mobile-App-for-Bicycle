@@ -4,5 +4,17 @@
         <name>Shop Bike</name>
     </assembly>
     <members>
+        <member name="P:Shop_Bike.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:Shop_Bike.ViewModels.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:Shop_Bike.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:Shop_Bike.ViewModels.BaseViewModel.title"/>
+        </member>
+        <member name="F:Shop_Bike.ViewModels.HomePageViewModel.getBikeCommand">
+            <summary>The backing field for <see cref="P:Shop_Bike.ViewModels.HomePageViewModel.GetBikeCommand"/>.</summary>
+        </member>
+        <member name="P:Shop_Bike.ViewModels.HomePageViewModel.GetBikeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Shop_Bike.ViewModels.HomePageViewModel.GetBikeAsync"/>.</summary>
+        </member>
     </members>
 </doc>

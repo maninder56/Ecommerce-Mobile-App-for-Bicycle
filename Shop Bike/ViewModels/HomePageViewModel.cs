@@ -10,29 +10,30 @@ using System.Threading.Tasks;
 
 using Shop_Bike.Services;
 using System.Diagnostics;
+using CommunityToolkit.Mvvm.Input;
 
 namespace Shop_Bike.ViewModels
 {
     public partial class HomePageViewModel : BaseViewModel
     {
-        BikeService bikeService;
+        BikeService BikeService;
        public ObservableCollection<Bike> BikeList { get; } = new();
-
-        public Command GetBikeCommand { get;}
        public HomePageViewModel(BikeService bikeService)
         {
-            Title = "Shop Bike__";
-            this.bikeService = bikeService;
+            //Title = "Shop Bike__";
+            this.BikeService = bikeService;
+
         }
 
+        [RelayCommand]
         async Task GetBikeAsync()
         {
-            if (IsBusy) { return; }
+            
 
             try
             {
-                IsBusy = true;
-                var Bikes = await bikeService.GetBikes();
+                //IsBusy = true;
+                var Bikes = await BikeService.GetBikes();
 
                 if (BikeList.Count != 0)
                 {
@@ -54,7 +55,7 @@ namespace Shop_Bike.ViewModels
 
             finally 
             {
-                IsBusy = false;
+                //IsBusy = false;
             }
         }
     }

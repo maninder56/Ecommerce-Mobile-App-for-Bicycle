@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:Shop_Bike.Models"
+             xmlns:viewmodel="clr-namespace:Shop_Bike.ViewModels"
+             x:DataType="viewmodel:HomePageViewModel"
              x:Class="Shop_Bike.Views.HomePage"
              Title="Shop Bike"
               >
