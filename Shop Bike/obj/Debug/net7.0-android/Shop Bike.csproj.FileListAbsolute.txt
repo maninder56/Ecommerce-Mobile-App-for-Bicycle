@@ -978,3 +978,5 @@ C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-an
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\System.Xml.dll
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Mvvm.dll
+C:\Users\manin\source\repos\6002CEM_Maninder_Singh\Shop Bike\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Mvvm.pdb

@@ -1,0 +1,20 @@
+[
+    {
+        "Name" : "BMX",
+        "Description":"bike for city use",
+        "Image":"bike_one.jpg",
+        "Price":50
+    },
+    {
+        "Name" : "REgular",
+        "Description":" regular bike for city use",
+        "Image":"bike_two.jpg",
+        "Price":20
+    },
+    {
+        "Name" : "not regular",
+        "Description":"bike do what you want  for city use",
+        "Image":"bike_three.jpg",
+        "Price": 300
+    }
+]

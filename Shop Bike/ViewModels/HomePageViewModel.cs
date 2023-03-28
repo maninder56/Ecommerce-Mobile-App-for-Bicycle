@@ -1,53 +1,62 @@
-﻿using Shop_Bike.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Shop_Bike.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Shop_Bike.Services;
+using System.Diagnostics;
+
 namespace Shop_Bike.ViewModels
 {
-    public class HomePageViewModel
+    public partial class HomePageViewModel : BaseViewModel
     {
-         public List<BikesModel> Bikes;
+        BikeService bikeService;
+       public ObservableCollection<Bike> BikeList { get; } = new();
 
-
-
-
-        // constructor 
-        public HomePageViewModel()
+        public Command GetBikeCommand { get;}
+       public HomePageViewModel(BikeService bikeService)
         {
-            Bikes = new List<BikesModel>();
-            create_bikes();
+            Title = "Shop Bike__";
+            this.bikeService = bikeService;
         }
 
-        void create_bikes()
+        async Task GetBikeAsync()
         {
-            Bikes.Add(new BikesModel
-            {
-                Bike_name = "Bike One",
-                Bike_image = "bike_one.jpg",
-                Bike_price = "£ 50",
-            });
-            
+            if (IsBusy) { return; }
 
-            Bikes.Add(new BikesModel
+            try
             {
-                Bike_name = "Bike Two",
-                Bike_image = "bike_two.jpg",
-                Bike_price = "£ 100",
-            });
+                IsBusy = true;
+                var Bikes = await bikeService.GetBikes();
 
-            Bikes.Add(new BikesModel
+                if (BikeList.Count != 0)
+                {
+                    BikeList.Clear();
+                }
+
+                foreach (var bike in Bikes)
+                {
+                    BikeList.Add(bike);
+                }
+            }
+
+            catch (Exception ex) 
             {
-                Bike_name = "Bike Three",
-                Bike_image = "bike_three.jpg",
-                Bike_price = "£ 3000",
-            });
+                Debug.WriteLine(ex);
+                await Shell.Current.DisplayAlert("Error",
+                    $"Unable to get Bike Date {ex.Message}", "OK");
+            }
 
+            finally 
+            {
+                IsBusy = false;
+            }
         }
-
     }
 
     
