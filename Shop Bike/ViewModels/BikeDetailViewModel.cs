@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Shop_Bike.ViewModels
 {
-    [QueryProperty("Bike", "Bike")]
+    [QueryProperty(nameof(Bike), "Bike")]
     public partial class BikeDetailViewModel : BaseViewModel
     {
         public BikeDetailViewModel() 

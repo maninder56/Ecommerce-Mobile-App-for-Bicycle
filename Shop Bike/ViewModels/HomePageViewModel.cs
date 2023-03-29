@@ -46,6 +46,7 @@ namespace Shop_Bike.ViewModels
 
         }
 
+        [RelayCommand]
        async Task LoadBikes()
         {
             var Bikes = await BikeService.GetBikes();
