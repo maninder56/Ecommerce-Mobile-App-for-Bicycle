@@ -11,11 +11,13 @@ using System.Threading.Tasks;
 using Shop_Bike.Services;
 using System.Diagnostics;
 using CommunityToolkit.Mvvm.Input;
+using Shop_Bike.Views;
 
 namespace Shop_Bike.ViewModels
 {
     public partial class HomePageViewModel : BaseViewModel
     {
+
         BikeService BikeService;
        public ObservableCollection<Bike> BikeList { get; } = new();
        public HomePageViewModel(BikeService bikeService)
@@ -23,9 +25,47 @@ namespace Shop_Bike.ViewModels
             //Title = "Shop Bike__";
             this.BikeService = bikeService;
 
+            _ = LoadBikes();
+
         }
 
         [RelayCommand]
+        async Task GoToBikeDetailAsync(Bike bike)
+        {
+            if (bike is null)
+            {
+                return;
+            }
+
+            // pass id when using databse
+            await Shell.Current.GoToAsync($"{nameof(BikeDetailPage)}", true, 
+                new Dictionary<String, object>
+                {
+                    {"Bike", bike}
+                }); 
+
+        }
+
+       async Task LoadBikes()
+        {
+            var Bikes = await BikeService.GetBikes();
+
+            foreach (var Bike in Bikes)
+            {
+                BikeList.Add(Bike);
+            }
+        }
+
+
+
+
+    }
+}
+
+// 
+/* 
+ 
+ [RelayCommand]
         async Task GetBikeAsync()
         {
             
@@ -58,8 +98,6 @@ namespace Shop_Bike.ViewModels
                 //IsBusy = false;
             }
         }
-    }
-
-    
-
-}
+ 
+ 
+ */

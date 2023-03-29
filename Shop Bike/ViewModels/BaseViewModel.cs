@@ -16,12 +16,14 @@ namespace Shop_Bike.ViewModels
 
         }
 
-        [ObservableProperty]
-        //[NotifyPropertyChangedFor(nameof(IsNotBusy))]
-        bool isBusy;
+        //[ObservableProperty]
+        //string title;
 
-        [ObservableProperty]
-        string title;
+        //[ObservableProperty]
+        //[NotifyPropertyChangedFor(nameof(IsNotBusy))]
+        //bool isBusy;
+
+        
 
         //public bool IsNotBusy => !IsBusy;
     }

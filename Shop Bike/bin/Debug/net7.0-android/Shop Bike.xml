@@ -4,17 +4,14 @@
         <name>Shop Bike</name>
     </assembly>
     <members>
-        <member name="P:Shop_Bike.ViewModels.BaseViewModel.IsBusy">
-            <inheritdoc cref="F:Shop_Bike.ViewModels.BaseViewModel.isBusy"/>
+        <member name="P:Shop_Bike.ViewModels.BikeDetailViewModel.Bike">
+            <inheritdoc cref="F:Shop_Bike.ViewModels.BikeDetailViewModel.bike"/>
         </member>
-        <member name="P:Shop_Bike.ViewModels.BaseViewModel.Title">
-            <inheritdoc cref="F:Shop_Bike.ViewModels.BaseViewModel.title"/>
+        <member name="F:Shop_Bike.ViewModels.HomePageViewModel.goToBikeDetailCommand">
+            <summary>The backing field for <see cref="P:Shop_Bike.ViewModels.HomePageViewModel.GoToBikeDetailCommand"/>.</summary>
         </member>
-        <member name="F:Shop_Bike.ViewModels.HomePageViewModel.getBikeCommand">
-            <summary>The backing field for <see cref="P:Shop_Bike.ViewModels.HomePageViewModel.GetBikeCommand"/>.</summary>
-        </member>
-        <member name="P:Shop_Bike.ViewModels.HomePageViewModel.GetBikeCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Shop_Bike.ViewModels.HomePageViewModel.GetBikeAsync"/>.</summary>
+        <member name="P:Shop_Bike.ViewModels.HomePageViewModel.GoToBikeDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Shop_Bike.ViewModels.HomePageViewModel.GoToBikeDetailAsync(Shop_Bike.Models.Bike)"/>.</summary>
         </member>
     </members>
 </doc>
