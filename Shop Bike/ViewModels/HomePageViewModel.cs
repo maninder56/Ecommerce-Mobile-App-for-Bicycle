@@ -20,10 +20,13 @@ namespace Shop_Bike.ViewModels
 
         BikeService BikeService;
        public ObservableCollection<Bike> BikeList { get; } = new();
-       public HomePageViewModel(BikeService bikeService)
+
+        IConnectivity connectivity; 
+       public HomePageViewModel(BikeService bikeService, IConnectivity connectivity)
         {
             //Title = "Shop Bike__";
             this.BikeService = bikeService;
+            this.connectivity = connectivity; 
 
             _ = LoadBikes();
 
@@ -49,6 +52,12 @@ namespace Shop_Bike.ViewModels
         [RelayCommand]
        async Task LoadBikes()
         {
+            if (connectivity.NetworkAccess != NetworkAccess.Internet) 
+            {
+                await Shell.Current.DisplayAlert("Internet issue",
+                    $"Check your internet and try again!", "OK");
+            }
+
             var Bikes = await BikeService.GetBikes();
 
             foreach (var Bike in Bikes)

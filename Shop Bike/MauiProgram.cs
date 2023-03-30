@@ -18,7 +18,11 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		builder.Services.AddSingleton<BikeService>();
+		builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
+        builder.Services.AddSingleton<IGeolocation>(Geolocation.Default);
+        builder.Services.AddSingleton<IMap>(Map.Default);
+
+        builder.Services.AddSingleton<BikeService>();
 
 		builder.Services.AddSingleton<HomePageViewModel>();
 		builder.Services.AddTransient<BikeDetailViewModel>();
