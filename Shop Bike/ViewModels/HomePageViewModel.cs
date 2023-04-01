@@ -32,6 +32,9 @@ namespace Shop_Bike.ViewModels
 
         }
 
+        [ObservableProperty]
+        bool isRefreshing;
+
         [RelayCommand]
         async Task GoToBikeDetailAsync(Bike bike)
         {
@@ -58,12 +61,18 @@ namespace Shop_Bike.ViewModels
                     $"Check your internet and try again!", "OK");
             }
 
+            if (BikeList.Count != 0)
+            {
+                BikeList.Clear();
+            }
             var Bikes = await BikeService.GetBikes();
 
             foreach (var Bike in Bikes)
             {
                 BikeList.Add(Bike);
             }
+
+            IsRefreshing = false;
         }
 
 

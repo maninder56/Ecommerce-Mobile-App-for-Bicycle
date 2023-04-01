@@ -64,41 +64,46 @@
 
         </HorizontalStackLayout>
 
-        <CollectionView BackgroundColor="LightGray"
-                        Grid.Row="1"
+        <RefreshView Grid.Row="1"
+                     Command="{Binding LoadBikesCommand}"
+                     IsRefreshing="{Binding IsRefreshing}">
+
+            <CollectionView BackgroundColor="LightGray"
                         ItemsSource="{Binding BikeList}"
-                        SelectionMode="None"
-                        >
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="model:Bike">
-                    <Grid Padding="8">
-                        <Frame HeightRequest="200"
+                        SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Bike">
+                        <Grid Padding="8">
+                            <Frame HeightRequest="200"
                                Padding="0">
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomePageViewModel}}, Path=GoToBikeDetailCommand}"
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomePageViewModel}}, Path=GoToBikeDetailCommand}"
                                                       CommandParameter="{Binding .}"/>
-                            </Frame.GestureRecognizers>
-                            <Grid Padding="0"
+                                </Frame.GestureRecognizers>
+                                <Grid Padding="0"
                                   ColumnDefinitions="220,*">
-                                <Image Source="{Binding Image}"
+                                    <Image Source="{Binding Image}"
                                        Aspect="AspectFit"/>
-                                
-                                <VerticalStackLayout Grid.Column="1"
+
+                                    <VerticalStackLayout Grid.Column="1"
                                                      Padding="10"
                                                      VerticalOptions="Center">
-                                    <Label Text="{Binding Name}"/>
-                                    <Label Text="{Binding Description}"/>
-                                    <Label Text="{Binding Price}"/>
+                                        <Label Text="{Binding Name}"/>
+                                        <Label Text="{Binding Description}"/>
+                                        <Label Text="{Binding Price}"/>
 
-                                </VerticalStackLayout>
-                            </Grid>
-                        </Frame>
-                        
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-            
-        </CollectionView>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </RefreshView>
+        
+        
         
 
 

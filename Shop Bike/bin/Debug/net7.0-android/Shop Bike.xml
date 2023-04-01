@@ -7,6 +7,9 @@
         <member name="P:Shop_Bike.ViewModels.BikeDetailViewModel.Bike">
             <inheritdoc cref="F:Shop_Bike.ViewModels.BikeDetailViewModel.bike"/>
         </member>
+        <member name="P:Shop_Bike.ViewModels.HomePageViewModel.IsRefreshing">
+            <inheritdoc cref="F:Shop_Bike.ViewModels.HomePageViewModel.isRefreshing"/>
+        </member>
         <member name="F:Shop_Bike.ViewModels.HomePageViewModel.goToBikeDetailCommand">
             <summary>The backing field for <see cref="P:Shop_Bike.ViewModels.HomePageViewModel.GoToBikeDetailCommand"/>.</summary>
         </member>
