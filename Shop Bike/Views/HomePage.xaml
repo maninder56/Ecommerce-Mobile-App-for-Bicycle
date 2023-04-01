@@ -69,8 +69,10 @@
                      IsRefreshing="{Binding IsRefreshing}">
 
             <CollectionView BackgroundColor="LightGray"
-                        ItemsSource="{Binding BikeList}"
-                        SelectionMode="None">
+                            ItemsSource="{Binding BikeList}"
+                            SelectionMode="None"
+                            EmptyView="No Data">
+                
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Bike">
                         <Grid Padding="8">
