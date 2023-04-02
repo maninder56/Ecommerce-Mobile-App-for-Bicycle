@@ -49,11 +49,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\account.png" />
 	  <None Remove="Resources\Images\bike_one.jpg" />
 	  <None Remove="Resources\Images\bike_three.jpg" />
 	  <None Remove="Resources\Images\bike_two.jpg" />
 	  <None Remove="Resources\Images\cart.png" />
 	  <None Remove="Resources\Images\cart2.svg" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\question.png" />
 	  <None Remove="Resources\Raw\bikes.json" />
 	</ItemGroup>
 

@@ -1,7 +1,10 @@
-﻿obj\Debug\net7.0-android\resizetizer\r\drawable\bike_one.jpg
+﻿obj\Debug\net7.0-android\resizetizer\r\drawable\account.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\bike_one.jpg
 obj\Debug\net7.0-android\resizetizer\r\drawable\bike_three.jpg
 obj\Debug\net7.0-android\resizetizer\r\drawable\bike_two.jpg
 obj\Debug\net7.0-android\resizetizer\r\drawable\cart.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\home.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\question.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\cart2.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\splash.png
