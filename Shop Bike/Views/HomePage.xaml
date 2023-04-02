@@ -39,21 +39,25 @@
                            WidthRequest="270"/>
             </Border>
 
+            <Border Stroke="{StaticResource SecondaryColor}"
+                    StrokeThickness="5"
+                    StrokeShape="RoundRectangle 20,20,20,20"
+                    Padding="5,10"
+                    HorizontalOptions="Center">
 
-
-            <Button Text="Cart"
-                    HeightRequest="60"
-                    WidthRequest="70"
-                    Style="{StaticResource ButtonOutline-Custom}"
-                    BackgroundColor="Transparent"
-                    TextColor="Black"
-                    FontSize="20"
-                    FontAttributes="Bold"
-                    Padding="0"
-                    Margin="10"/>
-
+                <ImageButton Source="cart.png"
+                        HeightRequest="40"
+                        WidthRequest="50"
+                        Margin="10"
+                        Clicked="OnImageButtonClicked"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+            </Border>
+            
 
         </HorizontalStackLayout>
+
+        
 
         <RefreshView Grid.Row="1"
                      Command="{Binding LoadBikesCommand}"
@@ -195,7 +199,16 @@
     
     
     
-    
+    <Button Text="Cart"
+                    HeightRequest="60"
+                    WidthRequest="70"
+                    Style="{StaticResource ButtonOutline-Custom}"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    Padding="0"
+                    Margin="10"/>
     
     
     
