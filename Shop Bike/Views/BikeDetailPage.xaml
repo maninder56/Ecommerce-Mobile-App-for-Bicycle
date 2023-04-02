@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shop_Bike.Views.BikeDetailPage"
+             xmlns:viewmodel="clr-namespace:Shop_Bike.ViewModels"
+             x:DataType="viewmodel:BikeDetailViewModel"
+             Title="{Binding Bike.Name}">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid RowDefinitions="*, Auto">
+                <Label Grid.Row="0"
+                       HorizontalOptions="Center"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                        Text="{Binding Bike.Name}"/>
+
+                <Border Grid.Row="1"
+                        StrokeThickness="5"
+                        StrokeShape="RoundRectangle 30,30,30,30"
+                        Padding="5,10"
+                        HorizontalOptions="Center">
+                    <Border.Stroke>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="Red"
+                          Offset="0.1" />
+                            <GradientStop Color="White"
+                          Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Border.Stroke>
+
+
+                    <Image Aspect="AspectFit"
+                           HeightRequest="300"
+                           WidthRequest="350"
+                            Source="{Binding Bike.Image}"/>
+                </Border>
+            </Grid>
+
+            <VerticalStackLayout Padding="40" Spacing="10"
+                                 HorizontalOptions="Center">
+                <HorizontalStackLayout>
+                    <Label Text="{Binding Bike.Description, StringFormat='More Info: {0}'}"/>
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout>
+                    <Label Text="{Binding Bike.Price, StringFormat='Price: £{0}'}"/>
+                </HorizontalStackLayout>
+                
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>

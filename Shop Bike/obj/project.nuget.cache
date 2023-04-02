@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "f9+hyCfiJehHGKmHfSalTwV97+vNmZ7ARO5Y0DD2BPl0tr/Hvbrtzm4mec5VJHYYIJad+/54H6ckvUf4FCPDgA==",
+  "dgSpecHash": "bw+bqcrdy/suW1R5os9nI6C/J/mMUCRP2IdJAINaoYLp2MM5/VVF25tC8n8W1ckczXEvOMGJnrx06hGMKaSAhA==",
   "success": true,
   "projectFilePath": "C:\\Users\\manin\\source\\repos\\6002CEM_Maninder_Singh\\Shop Bike\\Shop Bike.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\manin\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
     "C:\\Users\\manin\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\manin\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\manin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

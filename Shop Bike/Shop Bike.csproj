@@ -52,13 +52,20 @@
 	  <None Remove="Resources\Images\bike_one.jpg" />
 	  <None Remove="Resources\Images\bike_three.jpg" />
 	  <None Remove="Resources\Images\bike_two.jpg" />
+	  <None Remove="Resources\Images\cart.png" />
+	  <None Remove="Resources\Images\cart2.svg" />
+	  <None Remove="Resources\Raw\bikes.json" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\BikeDetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

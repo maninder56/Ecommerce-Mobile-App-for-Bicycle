@@ -1,28 +1,182 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:Shop_Bike.Models"
+             xmlns:viewmodel="clr-namespace:Shop_Bike.ViewModels"
+             x:DataType="viewmodel:HomePageViewModel"
              x:Class="Shop_Bike.Views.HomePage"
              Title="Shop Bike"
-             >
-    <VerticalStackLayout>
-        
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+              >
 
-        <HorizontalStackLayout Spacing="50">
 
-            <SearchBar Placeholder="Search"
-                       WidthRequest="250"/>
-            <Button Text="Cart"/>
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*"/>
+        </Grid.RowDefinitions>
+
+        <HorizontalStackLayout Grid.Row="0">
+
+            <Border StrokeThickness="5"
+                    StrokeShape="RoundRectangle 100,100,100,100"
+                    Background="#EEEEEE "
+                    Padding="5,10"
+                    HorizontalOptions="Center">
+
+                <Border.Stroke>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#DADADA"
+                          Offset="0.1" />
+                        <GradientStop Color="White"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Stroke>
+
+
+                <SearchBar Placeholder="Search"
+                           FontSize="Medium"
+                           WidthRequest="270"/>
+            </Border>
+
+            <Border StrokeThickness="5"
+                    StrokeShape="RoundRectangle 80,80,80,80"
+                    Background="#EEEEEE "
+                    Padding="10,10"
+                    WidthRequest="100"
+                    HorizontalOptions="Center">
+
+                <Border.Stroke>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#DADADA"
+                          Offset="0.1" />
+                        <GradientStop Color="White"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Stroke>
+
+                <Button Text="Cart"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        Padding="5"/>
+            </Border>
 
         </HorizontalStackLayout>
-        <Image Source="bike_one.jpg"/>
 
+        <RefreshView Grid.Row="1"
+                     Command="{Binding LoadBikesCommand}"
+                     IsRefreshing="{Binding IsRefreshing}">
+
+            <CollectionView BackgroundColor="LightGray"
+                            ItemsSource="{Binding BikeList}"
+                            SelectionMode="None"
+                            EmptyView="No Data">
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Bike">
+                        <Grid Padding="8">
+                            <Frame HeightRequest="200"
+                               Padding="0">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomePageViewModel}}, Path=GoToBikeDetailCommand}"
+                                                      CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid Padding="0"
+                                  ColumnDefinitions="220,*">
+                                    <Image Source="{Binding Image}"
+                                       Aspect="AspectFit"/>
+
+                                    <VerticalStackLayout Grid.Column="1"
+                                                     Padding="10"
+                                                     VerticalOptions="Center">
+                                        <Label Text="{Binding Name}"/>
+                                        <Label Text="{Binding Description}"/>
+                                        <Label Text="{Binding Price}"/>
+
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </RefreshView>
+        
+        
         
 
 
-    </VerticalStackLayout>
+
+
+
+
+    </Grid>
     
+    
+
 </ContentPage>
+
+<!--
+        
+        <CollectionView Grid.Row="1" HeightRequest="620">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type model:Bike}">
+                    <model:Bike Name="BMX"
+                                Image="bike_one.jpg"
+                                Price="100"/>
+                    <model:Bike Name="Regular"
+                                Image="bike_two.jpg"
+                                Price="10"/>
+                    <model:Bike Name="Outdoor"
+                                Image="bike_three.jpg"
+                                Price="600"/>
+
+                    <model:Bike Name="Outdoor"
+                                Image="bike_three.jpg"
+                                Price="600"/>
+                    <model:Bike Name="Outdoor"
+                                Image="bike_three.jpg"
+                                Price="600"/>
+                    <model:Bike Name="Outdoor"
+                                Image="bike_three.jpg"
+                                Price="600"/>
+                    <model:Bike Name="Outdoor"
+                                Image="bike_three.jpg"
+                                Price="600"/>
+                    <model:Bike Name="Outdoor"
+                                Image="bike_three.jpg"
+                                Price="600"/>
+                    <model:Bike Name="Outdoor"
+                                Image="bike_three.jpg"
+                                Price="600"/>
+                </x:Array>
+            </CollectionView.ItemsSource>
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Bike">
+                    <HorizontalStackLayout Padding="10">
+                        <Image Source="{Binding Image}"
+                               HeightRequest="100"
+                               WidthRequest="200"
+                               Aspect="AspectFit"/>
+                        
+                        <VerticalStackLayout Grid.Row="0" Spacing="10" VerticalOptions="Center">
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Price}"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                    
+                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        
+        
+        
+        -->
+    
+   

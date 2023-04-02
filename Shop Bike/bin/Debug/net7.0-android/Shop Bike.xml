@@ -4,5 +4,23 @@
         <name>Shop Bike</name>
     </assembly>
     <members>
+        <member name="P:Shop_Bike.ViewModels.BikeDetailViewModel.Bike">
+            <inheritdoc cref="F:Shop_Bike.ViewModels.BikeDetailViewModel.bike"/>
+        </member>
+        <member name="P:Shop_Bike.ViewModels.HomePageViewModel.IsRefreshing">
+            <inheritdoc cref="F:Shop_Bike.ViewModels.HomePageViewModel.isRefreshing"/>
+        </member>
+        <member name="F:Shop_Bike.ViewModels.HomePageViewModel.goToBikeDetailCommand">
+            <summary>The backing field for <see cref="P:Shop_Bike.ViewModels.HomePageViewModel.GoToBikeDetailCommand"/>.</summary>
+        </member>
+        <member name="P:Shop_Bike.ViewModels.HomePageViewModel.GoToBikeDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Shop_Bike.ViewModels.HomePageViewModel.GoToBikeDetailAsync(Shop_Bike.Models.Bike)"/>.</summary>
+        </member>
+        <member name="F:Shop_Bike.ViewModels.HomePageViewModel.loadBikesCommand">
+            <summary>The backing field for <see cref="P:Shop_Bike.ViewModels.HomePageViewModel.LoadBikesCommand"/>.</summary>
+        </member>
+        <member name="P:Shop_Bike.ViewModels.HomePageViewModel.LoadBikesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Shop_Bike.ViewModels.HomePageViewModel.LoadBikes"/>.</summary>
+        </member>
     </members>
 </doc>
