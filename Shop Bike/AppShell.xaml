@@ -13,9 +13,13 @@
             </Style>
         </ResourceDictionary>
     </Shell.Resources>
-    
-    
-    
+
+
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="140" BackgroundColor="{StaticResource PrimaryColor}">
+            <Image Source="bike_icon.png" />
+        </Grid>
+    </Shell.FlyoutHeader>
     
 
     <FlyoutItem Title="Home Page" Icon="home.png">

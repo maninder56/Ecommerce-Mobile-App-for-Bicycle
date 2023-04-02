@@ -32,10 +32,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#E73737" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\bike_icon.png" Color="#E73737" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -50,11 +50,11 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\account.png" />
+	  <None Remove="Resources\Images\bike_icon.png" />
 	  <None Remove="Resources\Images\bike_one.jpg" />
 	  <None Remove="Resources\Images\bike_three.jpg" />
 	  <None Remove="Resources\Images\bike_two.jpg" />
 	  <None Remove="Resources\Images\cart.png" />
-	  <None Remove="Resources\Images\cart2.svg" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\question.png" />
 	  <None Remove="Resources\Raw\bikes.json" />
