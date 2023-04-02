@@ -15,19 +15,20 @@
             <RowDefinition Height="0.9*"/>
         </Grid.RowDefinitions>
 
-        <HorizontalStackLayout Grid.Row="0">
+        <HorizontalStackLayout Grid.Row="0"
+                               HorizontalOptions="Center">
 
             <Border StrokeThickness="5"
-                    StrokeShape="RoundRectangle 100,100,100,100"
-                    Background="#EEEEEE "
+                    StrokeShape="RoundRectangle 20,20,20,20"
+                    Background="White"
                     Padding="5,10"
                     HorizontalOptions="Center">
 
                 <Border.Stroke>
                     <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="#DADADA"
+                        <GradientStop Color="{StaticResource SecondaryColor}"
                           Offset="0.1" />
-                        <GradientStop Color="White"
+                        <GradientStop Color="{StaticResource SecondaryColor}"
                           Offset="1.0" />
                     </LinearGradientBrush>
                 </Border.Stroke>
@@ -38,29 +39,19 @@
                            WidthRequest="270"/>
             </Border>
 
-            <Border StrokeThickness="5"
-                    StrokeShape="RoundRectangle 80,80,80,80"
-                    Background="#EEEEEE "
-                    Padding="10,10"
-                    WidthRequest="100"
-                    HorizontalOptions="Center">
 
-                <Border.Stroke>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="#DADADA"
-                          Offset="0.1" />
-                        <GradientStop Color="White"
-                          Offset="1.0" />
-                    </LinearGradientBrush>
-                </Border.Stroke>
 
-                <Button Text="Cart"
-                        BackgroundColor="Transparent"
-                        TextColor="Black"
-                        FontSize="20"
-                        FontAttributes="Bold"
-                        Padding="5"/>
-            </Border>
+            <Button Text="Cart"
+                    HeightRequest="60"
+                    WidthRequest="70"
+                    Style="{StaticResource ButtonOutline-Custom}"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    Padding="0"
+                    Margin="10"/>
+
 
         </HorizontalStackLayout>
 
@@ -68,7 +59,7 @@
                      Command="{Binding LoadBikesCommand}"
                      IsRefreshing="{Binding IsRefreshing}">
 
-            <CollectionView BackgroundColor="LightGray"
+            <CollectionView BackgroundColor="Transparent"
                             ItemsSource="{Binding BikeList}"
                             SelectionMode="None"
                             EmptyView="No Data">
@@ -77,10 +68,10 @@
                     <DataTemplate x:DataType="model:Bike">
                         <Grid Padding="8">
                             <Frame HeightRequest="200"
-                               Padding="0">
+                               Padding="4">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomePageViewModel}}, Path=GoToBikeDetailCommand}"
-                                                      CommandParameter="{Binding .}"/>
+                                                          CommandParameter="{Binding .}"/>
                                 </Frame.GestureRecognizers>
                                 <Grid Padding="0"
                                   ColumnDefinitions="220,*">
@@ -88,12 +79,21 @@
                                        Aspect="AspectFit"/>
 
                                     <VerticalStackLayout Grid.Column="1"
-                                                     Padding="10"
-                                                     VerticalOptions="Center">
-                                        <Label Text="{Binding Name}"/>
-                                        <Label Text="{Binding Description}"/>
-                                        <Label Text="{Binding Price}"/>
-
+                                                         HeightRequest="170"
+                                                         Padding="10"
+                                                         VerticalOptions="Center">
+                                        <Label Text="{Binding Name}" 
+                                               Style="{StaticResource BikeTitle}"/>
+                                        <Label Text="{Binding Description}"
+                                               FontSize="11"/>
+                                        <!-- Add short discription-->
+                                        <HorizontalStackLayout>
+                                            <Label Text="£"/>
+                                            <Label Text="{Binding Price}"/>
+                                        </HorizontalStackLayout>
+                                        <Button Text="Buy"
+                                                Margin="30"
+                                                Style="{StaticResource ButtonOutline-Custom}"/>
                                     </VerticalStackLayout>
                                 </Grid>
                             </Frame>
@@ -176,6 +176,29 @@
 
         
         
+    
+    <Border StrokeThickness="5"
+                    StrokeShape="RoundRectangle 80,80,80,80"
+                    Background="#EEEEEE "
+                    Padding="10,10"
+                    WidthRequest="100"
+                    HorizontalOptions="Center">
+
+                <Border.Stroke>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#DADADA"
+                          Offset="0.1" />
+                        <GradientStop Color="White"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Stroke>
+    
+    
+    
+    
+    
+    
+    
         
         -->
     

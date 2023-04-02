@@ -6,9 +6,20 @@
     xmlns:local="clr-namespace:Shop_Bike.Views"
     Shell.FlyoutBehavior="Disabled">
 
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Shell" ApplyToDerivedTypes="True">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+    
+    
+    
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:HomePage}"
         Route="HomePage" />
-
+    
+    
 </Shell>
