@@ -417,4 +417,19 @@
         <Setter Property="FontAttributes" Value="Bold" />
     </Style>
 
+    <Style x:Key="PrimaryTitle" TargetType="Label">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
+    <Style x:Key="CommonBorder" TargetType="Border">
+        <Setter Property="Stroke" Value="{StaticResource SecondaryColor}" />
+        <Setter Property="StrokeThickness" Value="5" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 20,20,20,20"/>
+        <Setter Property="Padding" Value="5,10" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
 </ResourceDictionary>
+
+   

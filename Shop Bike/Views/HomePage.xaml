@@ -18,33 +18,14 @@
         <HorizontalStackLayout Grid.Row="0"
                                HorizontalOptions="Center">
 
-            <Border StrokeThickness="5"
-                    StrokeShape="RoundRectangle 20,20,20,20"
-                    Background="White"
-                    Padding="5,10"
-                    HorizontalOptions="Center">
-
-                <Border.Stroke>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="{StaticResource SecondaryColor}"
-                          Offset="0.1" />
-                        <GradientStop Color="{StaticResource SecondaryColor}"
-                          Offset="1.0" />
-                    </LinearGradientBrush>
-                </Border.Stroke>
-
-
+            <Border Style="{StaticResource CommonBorder}">
                 <SearchBar Placeholder="Search"
                            FontSize="Medium"
                            WidthRequest="270"/>
             </Border>
 
-            <Border Stroke="{StaticResource SecondaryColor}"
-                    StrokeThickness="5"
-                    StrokeShape="RoundRectangle 20,20,20,20"
-                    Padding="5,10"
-                    HorizontalOptions="Center">
 
+            <Border Style="{StaticResource CommonBorder}">
                 <ImageButton Source="cart.png"
                         HeightRequest="40"
                         WidthRequest="50"

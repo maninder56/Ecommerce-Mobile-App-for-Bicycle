@@ -45,8 +45,8 @@
 
     <FlyoutItem Title="About" Icon="question.png">
         <ShellContent
-            Title="Home"
-            ContentTemplate="{DataTemplate local:HomePage}"
-            Route="HomePage" />
+            Title="About"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Route="AboutPage" />
     </FlyoutItem>
 </Shell>
