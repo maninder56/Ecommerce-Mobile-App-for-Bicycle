@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Shop_Bike.Models"
+             x:Class="Shop_Bike.Views.AboutPage"
+             Title="AboutPage">
+
+    <ContentPage.BindingContext>
+        <models:About/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Spacing="10" Margin="10">
+        <Label Text="{Binding Name}"
+               Style="{StaticResource PrimaryTitle}"
+               HorizontalOptions="Center"/>
+
+        <Image Source="bike_app_icon1.png" 
+               HeightRequest="100"/>
+
+
+
+    </VerticalStackLayout>
+    
+</ContentPage>
