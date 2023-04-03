@@ -9,15 +9,31 @@
         <models:About/>
     </ContentPage.BindingContext>
 
-    <VerticalStackLayout Spacing="10" Margin="10">
-        <Label Text="{Binding Name}"
-               Style="{StaticResource PrimaryTitle}"
-               HorizontalOptions="Center"/>
-
-        <Image Source="bike_app_icon1.png" 
+    <VerticalStackLayout Spacing="10" Margin="20">
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Label Text="{Binding Name}"
+                   Style="{StaticResource PrimaryTitle}"/>
+            <Label Text="{Binding Version}"
+                   Style="{StaticResource PrimaryTitle}"
+                   FontAttributes="None"/>
+        </HorizontalStackLayout>
+        
+        
+        <Border Style="{StaticResource CommonBorder}"
+                Margin="20"
+                Padding="25">
+            <Image Source="bike_app_icon1.png" 
                HeightRequest="100"/>
+        </Border>
 
-
+        <Label Text="{Binding Message}" 
+               HorizontalOptions="Center"/>
+        
+        <Button Text="Learn more About Bikes ..." 
+                Style="{StaticResource ButtonOutline-Custom}"
+                HorizontalOptions="Center"
+                Margin="20"
+                Clicked="LearnMore_Clicked"/>
 
     </VerticalStackLayout>
     
