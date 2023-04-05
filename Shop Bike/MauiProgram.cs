@@ -26,10 +26,13 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<HomePageViewModel>();
 		builder.Services.AddTransient<BikeDetailViewModel>();
+		builder.Services.AddTransient<MapViewModel>();
 
 		builder.Services.AddSingleton<HomePage>();
 		builder.Services.AddTransient<BikeDetailPage>();
 		builder.Services.AddSingleton<AboutPage>();
+		builder.Services.AddTransient<MapPage>();
+		builder.Services.AddSingleton<AccountPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

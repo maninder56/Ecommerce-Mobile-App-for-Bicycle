@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shop_Bike.Views.AccountPage"
+             Title="AccountPage">
+    <VerticalStackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center">
+
+
+        <Label 
+            Text="User Account"
+            FontSize="30"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Border Style="{StaticResource CommonBorder}"
+                Margin="20"
+                Padding="20">
+            <Label Text="UserName"/>
+        </Border>
+        <Entry
+            Margin="5,0,0,0"
+            Placeholder="Username"
+            FontSize="18">
+        </Entry>
+
+        <Border Style="{StaticResource CommonBorder}"
+                Margin="20"
+                Padding="20">
+            <Label Text="Password"/>
+        </Border>
+        <Entry
+            Margin="5,0,0,0"
+            Placeholder="Password"
+            FontSize="18">
+        </Entry>
+
+    </VerticalStackLayout>
+</ContentPage>

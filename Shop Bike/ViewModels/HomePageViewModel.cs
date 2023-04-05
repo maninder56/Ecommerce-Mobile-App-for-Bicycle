@@ -21,16 +21,20 @@ namespace Shop_Bike.ViewModels
        public ObservableCollection<Bike> BikeList { get; } = new();
         public ObservableCollection<Cart> CartList { get; } = new();
 
-        IConnectivity connectivity; 
-       public HomePageViewModel(BikeService bikeService, IConnectivity connectivity)
+        IConnectivity connectivity;
+        IGeolocation geolocation; 
+
+       public HomePageViewModel(BikeService bikeService, IConnectivity connectivity, IGeolocation geolocation)
         {
             //Title = "Shop Bike__";
             this.BikeService = bikeService;
             this.connectivity = connectivity; 
+            this.geolocation = geolocation;
 
             _ = LoadBikes();
 
         }
+
 
         [ObservableProperty]
         bool isRefreshing;
@@ -82,7 +86,7 @@ namespace Shop_Bike.ViewModels
     }
 }
 
-// 
+
 /* 
  
  [RelayCommand]
