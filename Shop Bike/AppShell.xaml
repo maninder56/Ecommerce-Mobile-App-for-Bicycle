@@ -38,9 +38,9 @@
 
     <FlyoutItem Title="Cart" Icon="cart.png">
         <ShellContent
-            Title="Home"
-            ContentTemplate="{DataTemplate local:HomePage}"
-            Route="HomePage" />
+            Title="Cart"
+            ContentTemplate="{DataTemplate local:CartPage}"
+            Route="CartPage" />
     </FlyoutItem>
 
     <FlyoutItem Title="About" Icon="question.png">

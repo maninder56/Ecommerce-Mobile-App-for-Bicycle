@@ -78,7 +78,8 @@
                                         </HorizontalStackLayout>
                                         <Button Text="Buy"
                                                 Margin="25"
-                                                Style="{StaticResource ButtonOutline-Custom}"/>
+                                                Style="{StaticResource ButtonOutline-Custom}"
+                                                />
                                     </VerticalStackLayout>
                                 </Grid>
                             </Frame>
@@ -90,12 +91,6 @@
             </CollectionView>
         </RefreshView>
         
-        
-        
-
-
-
-
 
 
     </Grid>

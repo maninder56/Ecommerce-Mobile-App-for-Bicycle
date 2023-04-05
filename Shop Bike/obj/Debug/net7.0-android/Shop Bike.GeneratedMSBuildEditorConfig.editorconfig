@@ -50,6 +50,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Shop_Bike.Views.BikeDetail
 build_metadata.AdditionalFiles.TargetPath = Views\BikeDetailPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\BikeDetailPage.xaml
 
+[C:/Users/manin/source/repos/6002CEM_Maninder_Singh/Shop Bike/Views/CartPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Shop_Bike.Views.CartPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CartPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CartPage.xaml
+
 [C:/Users/manin/source/repos/6002CEM_Maninder_Singh/Shop Bike/Views/HomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Shop_Bike.Views.HomePage.xaml

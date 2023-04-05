@@ -12,10 +12,8 @@ public partial class HomePage : ContentPage
 	}
 
 	// got to cart page 
-    private void OnImageButtonClicked(object sender, EventArgs e)
+    private async void OnImageButtonClicked(object sender, EventArgs e)
     {
-
+        await Shell.Current.GoToAsync(nameof(CartPage));
     }
-
-    
 }
