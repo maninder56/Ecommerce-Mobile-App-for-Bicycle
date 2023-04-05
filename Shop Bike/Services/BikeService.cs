@@ -38,7 +38,7 @@ namespace Shop_Bike.Services
             }
 
 
-            // If internet unavailable user local file 
+            // If internet unavailable use local file 
 
             /*using var stream = await FileSystem.OpenAppPackageFileAsync("bikes.json");
             using var reader = new StreamReader(stream);
