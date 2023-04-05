@@ -16,5 +16,13 @@
         "Description":"bike do what you want  for city use",
         "Image":"bike_three.jpg",
         "Price": 300
-    }
+    },
+
+  {
+    "Name": "Blue",
+    "Description": "bike do use",
+    "Image": "https://cdn.shopify.com/s/files/1/0405/1117/6862/products/Islabikes-Beinn20-Small-Teal-ChildrensBike.jpg?v=1644601461",
+    "Price": 30
+  }
+
 ]
