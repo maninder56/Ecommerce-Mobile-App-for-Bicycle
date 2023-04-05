@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Shop_Bike.ViewModels"
+             x:Class="Shop_Bike.Views.MapPage"
+             Title="Map">
+
+    
+    <VerticalStackLayout>
+        <Button Text="Open Maps"
+                Clicked="Map_Button_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

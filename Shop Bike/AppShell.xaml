@@ -22,31 +22,26 @@
     </Shell.FlyoutHeader>
     
 
-    <FlyoutItem Title="Home Page" Icon="home.png">
-        <ShellContent
-            Title="Home"
-            ContentTemplate="{DataTemplate local:HomePage}"
-            Route="HomePage" />
+    <FlyoutItem Title="Home" Icon="home.png">
+        <ShellContent Title="Home" Icon="home.png"
+            ContentTemplate="{DataTemplate local:HomePage}"/>
+
+        <ShellContent Title="Maps" Icon="map.svg"
+            ContentTemplate="{DataTemplate local:MapPage}"/>
     </FlyoutItem>
 
     <FlyoutItem Title="Account" Icon="account.png">
         <ShellContent
-            Title="Home"
-            ContentTemplate="{DataTemplate local:HomePage}"
-            Route="HomePage" />
+            ContentTemplate="{DataTemplate local:HomePage}"/>
     </FlyoutItem>
 
     <FlyoutItem Title="Cart" Icon="cart.png">
         <ShellContent
-            Title="Cart"
-            ContentTemplate="{DataTemplate local:CartPage}"
-            Route="CartPage" />
+            ContentTemplate="{DataTemplate local:CartPage}"/>
     </FlyoutItem>
 
     <FlyoutItem Title="About" Icon="question.png">
         <ShellContent
-            Title="About"
-            ContentTemplate="{DataTemplate local:AboutPage}"
-            Route="AboutPage" />
+            ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
 </Shell>

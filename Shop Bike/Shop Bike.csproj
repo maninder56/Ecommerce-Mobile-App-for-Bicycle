@@ -57,6 +57,7 @@
 	  <None Remove="Resources\Images\bike_two.jpg" />
 	  <None Remove="Resources\Images\cart.png" />
 	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\map.svg" />
 	  <None Remove="Resources\Images\question.png" />
 	  <None Remove="Resources\Raw\bikes.json" />
 	  <None Remove="Resources\Splash\bike_app_icon1.png" />
@@ -84,6 +85,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MapPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
