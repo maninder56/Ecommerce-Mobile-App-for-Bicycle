@@ -16,15 +16,12 @@
                         Text="{Binding Bike.Name}"/>
 
                 <Border Grid.Row="1"
-                        StrokeThickness="5"
-                        StrokeShape="RoundRectangle 30,30,30,30"
-                        Padding="5,10"
-                        HorizontalOptions="Center">
+                        Style="{StaticResource CommonBorder}">
                     <Border.Stroke>
                         <LinearGradientBrush EndPoint="0,1">
                             <GradientStop Color="Red"
                           Offset="0.1" />
-                            <GradientStop Color="White"
+                            <GradientStop Color="Pink"
                           Offset="1.0" />
                         </LinearGradientBrush>
                     </Border.Stroke>
@@ -37,14 +34,18 @@
                 </Border>
             </Grid>
 
-            <VerticalStackLayout Padding="40" Spacing="10"
+            <VerticalStackLayout Padding="20" Spacing="10"
                                  HorizontalOptions="Center">
-                <HorizontalStackLayout>
-                    <Label Text="{Binding Bike.Description, StringFormat='More Info: {0}'}"/>
-                </HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="{Binding Bike.Description}"
+                           Style="{StaticResource BikeDescription}"
+                           LineBreakMode="WordWrap"
+                           LineHeight="1"/>
+                </VerticalStackLayout>
                 
                 <HorizontalStackLayout>
-                    <Label Text="{Binding Bike.Price, StringFormat='Price: £{0}'}"/>
+                    <Label Text="{Binding Bike.Price, StringFormat='Price: £{0}'}"
+                           Style="{StaticResource PriceText}"/>
                 </HorizontalStackLayout>
                 
             </VerticalStackLayout>

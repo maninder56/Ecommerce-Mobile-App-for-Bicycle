@@ -59,6 +59,11 @@
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\question.png" />
 	  <None Remove="Resources\Raw\bikes.json" />
+	  <None Remove="Resources\Splash\bike_app_icon1.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Splash\bike_app_icon1.png" />
 	</ItemGroup>
 
 	<ItemGroup>
