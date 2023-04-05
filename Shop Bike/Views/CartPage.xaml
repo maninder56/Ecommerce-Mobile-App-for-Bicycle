@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:Shop_Bike.Models"
+             x:Class="Shop_Bike.Views.CartPage"
+             Title="Cart">
+
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*"/>
+        </Grid.RowDefinitions>
+
+        <HorizontalStackLayout Grid.Row="0"
+                               HorizontalOptions="Center">
+
+            <Border Style="{StaticResource CommonBorder}"
+                    HorizontalOptions="FillAndExpand">
+                <Label Text="Items in Cart: "
+                       Style="{StaticResource CartTitle}"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+
+            </Border>
+
+            <!-- {Binding Bike.Price, StringFormat='Price: £{0}'} -->
+            <Border Style="{StaticResource CommonBorder}"
+                    HorizontalOptions="FillAndExpand">
+                <Label Text="Total Price:"  
+                       Style="{StaticResource CartTitle}"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+            </Border>
+        </HorizontalStackLayout>
+        
+        
+        
+        <!--
+        
+        <CollectionView BackgroundColor="Transparent"
+                            ItemsSource="{Binding BikeList}"
+                            SelectionMode="None"
+                            EmptyView="No Data">
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Bike">
+                        <Grid Padding="8">
+                            <Frame HeightRequest="200"
+                               Padding="4">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomePageViewModel}}, Path=GoToBikeDetailCommand}"
+                                                          CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid Padding="0"
+                                  ColumnDefinitions="220,*">
+                                    <Image Source="{Binding Image}"
+                                       Aspect="AspectFit"/>
+
+                                    <VerticalStackLayout Grid.Column="1"
+                                                         HeightRequest="170"
+                                                         Padding="10"
+                                                         VerticalOptions="Center"
+                                                         Spacing="7">
+                                        <Label Text="{Binding Name}"
+                                               Style="{StaticResource BikeTitle}"/>
+                                        <Label Text="{Binding ShortDescription}" 
+                                               Style="{StaticResource BikeDescription}"/>
+                                        <HorizontalStackLayout Spacing="1">
+                                            <Label Text="£"/>
+                                            <Label Text="{Binding Price}"/>
+                                        </HorizontalStackLayout>
+                                        <Button Text="Buy"
+                                                Margin="25"
+                                                Style="{StaticResource ButtonOutline-Custom}"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        
+        
+        -->
+        
+        
+        
+        
+    </Grid>
+</ContentPage>

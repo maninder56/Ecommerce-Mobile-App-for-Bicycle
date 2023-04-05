@@ -17,9 +17,9 @@ namespace Shop_Bike.ViewModels
 {
     public partial class HomePageViewModel : BaseViewModel
     {
-
         BikeService BikeService;
        public ObservableCollection<Bike> BikeList { get; } = new();
+        public ObservableCollection<Cart> CartList { get; } = new();
 
         IConnectivity connectivity; 
        public HomePageViewModel(BikeService bikeService, IConnectivity connectivity)
@@ -75,6 +75,7 @@ namespace Shop_Bike.ViewModels
             IsRefreshing = false;
         }
 
+        
 
 
 
