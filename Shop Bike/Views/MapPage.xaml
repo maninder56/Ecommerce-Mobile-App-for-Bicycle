@@ -6,11 +6,22 @@
              x:DataType="viewmodel:MapViewModel"
              Title="Map">
 
-    
-    <VerticalStackLayout Spacing="20">
+
+    <VerticalStackLayout Spacing="20"
+                         VerticalOptions="Center">
+        
+        <Label Text="Open maps to see Shop Bike"
+               HorizontalOptions="Center"
+               Style="{StaticResource PrimaryTitle}"/>
+        <Button Text="Go to Shop Bike"
+                Command="{Binding OpenShopBikeCommand}"
+                HorizontalOptions="CenterAndExpand"
+                Style="{StaticResource ButtonOutline-Custom}"/>
+        
         <Label Text="Open maps to see nearest Bike Shopes"
-               HorizontalOptions="Center"/>
-        <Button Text="Open Maps"
+               HorizontalOptions="Center"
+               Style="{StaticResource PrimaryTitle}"/>
+        <Button Text="Look at other Shops"
                 Command="{Binding OpenMapCommand}"
                 HorizontalOptions="CenterAndExpand"
                 Style="{StaticResource ButtonOutline-Custom}"/>

@@ -16,8 +16,6 @@ namespace Shop_Bike.ViewModels
             this.map = map;
            
         }
-        // Woodinville Bicycle 
-
 
         [RelayCommand]
         async Task OpenMapAsync()
@@ -36,6 +34,25 @@ namespace Shop_Bike.ViewModels
                 await Shell.Current.DisplayAlert("Error!",
                     $"Unable to open map: {ex.Message}", "OK");
             } 
+        }
+
+        [RelayCommand]
+        async Task OpenShopBike()
+        {
+            var placemark = new Placemark
+            {
+                Thoroughfare = "Woodinville Bicycle",
+            };
+            try
+            {
+                await map.OpenAsync(placemark);
+
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error!",
+                    $"Unable to open map: {ex.Message}", "OK");
+            }
         }
     }
 }

@@ -28,5 +28,11 @@
         <member name="P:Shop_Bike.ViewModels.MapViewModel.OpenMapCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Shop_Bike.ViewModels.MapViewModel.OpenMapAsync"/>.</summary>
         </member>
+        <member name="F:Shop_Bike.ViewModels.MapViewModel.openShopBikeCommand">
+            <summary>The backing field for <see cref="P:Shop_Bike.ViewModels.MapViewModel.OpenShopBikeCommand"/>.</summary>
+        </member>
+        <member name="P:Shop_Bike.ViewModels.MapViewModel.OpenShopBikeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Shop_Bike.ViewModels.MapViewModel.OpenShopBike"/>.</summary>
+        </member>
     </members>
 </doc>
