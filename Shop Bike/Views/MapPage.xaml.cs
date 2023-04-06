@@ -5,8 +5,6 @@ namespace Shop_Bike.Views;
 
 public partial class MapPage : ContentPage
 {
-    IMap map;
-
     public MapPage(MapViewModel map)
 	{
 		InitializeComponent();

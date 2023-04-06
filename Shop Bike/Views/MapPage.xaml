@@ -7,8 +7,12 @@
              Title="Map">
 
     
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="20">
+        <Label Text="Open maps to see nearest Bike Shopes"
+               HorizontalOptions="Center"/>
         <Button Text="Open Maps"
-                Command="{Binding OpenMapCommand}"/>
+                Command="{Binding OpenMapCommand}"
+                HorizontalOptions="CenterAndExpand"
+                Style="{StaticResource ButtonOutline-Custom}"/>
     </VerticalStackLayout>
 </ContentPage>
