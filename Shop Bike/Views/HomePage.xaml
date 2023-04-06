@@ -21,7 +21,8 @@
             <Border Style="{StaticResource CommonBorder}">
                 <SearchBar Placeholder="Search"
                            FontSize="Medium"
-                           WidthRequest="270"/>
+                           WidthRequest="270"
+                           TextChanged="SearchBar_TextChanged"/>
             </Border>
 
 

@@ -16,4 +16,10 @@ public partial class HomePage : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(CartPage));
     }
+
+    private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        await Shell.Current.DisplayAlert("Search Not available!",
+                    $"Please try again later", "OK");
+    }
 }

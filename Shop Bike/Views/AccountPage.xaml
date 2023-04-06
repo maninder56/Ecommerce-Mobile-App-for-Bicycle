@@ -3,21 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Shop_Bike.Views.AccountPage"
              Title="AccountPage">
-    <VerticalStackLayout VerticalOptions="Center"
-                         HorizontalOptions="Center">
+    <VerticalStackLayout VerticalOptions="Start"
+                         HorizontalOptions="Center"
+                         Margin="20">
 
 
         <Label 
             Text="User Account"
-            FontSize="30"
+            FontSize="25"
             FontAttributes="Bold"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
         <Border Style="{StaticResource CommonBorder}"
-                Margin="20"
-                Padding="20">
-            <Label Text="UserName"/>
+                Margin="15"
+                Padding="12"
+                HorizontalOptions="Fill">
+            <Label Text="UserName"
+                   HorizontalOptions="Center"/>
         </Border>
         <Entry
             Margin="5,0,0,0"
@@ -26,15 +29,21 @@
         </Entry>
 
         <Border Style="{StaticResource CommonBorder}"
-                Margin="20"
-                Padding="20">
-            <Label Text="Password"/>
+                Margin="15"
+                Padding="12"
+                HorizontalOptions="Fill">
+            <Label Text="Password"
+                   HorizontalOptions="Center"/>
         </Border>
         <Entry
             Margin="5,0,0,0"
             Placeholder="Password"
             FontSize="18">
         </Entry>
+
+        <Button Text="Login"
+                Margin="10"
+                Clicked="Button_Clicked"/>
 
     </VerticalStackLayout>
 </ContentPage>
