@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:Shop_Bike.ViewModels"
              x:Class="Shop_Bike.Views.MapPage"
+             x:DataType="viewmodel:MapViewModel"
              Title="Map">
 
     
     <VerticalStackLayout>
         <Button Text="Open Maps"
-                Clicked="Map_Button_Clicked"/>
+                Command="{Binding OpenMapCommand}"/>
     </VerticalStackLayout>
 </ContentPage>
